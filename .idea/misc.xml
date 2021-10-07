@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/CS/4th Year/DrawingAppforkids/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/CS/4th Year/DrawingAppforkids/app/src/main/res/drawable/large.xml" value="0.1" />
+        <entry key="..\:/CS/4th Year/DrawingAppforkids/app/src/main/res/layout/activity_main.xml" value="0.15925925925925927" />
+        <entry key="..\:/CS/4th Year/DrawingAppforkids/app/src/main/res/layout/dialog_brush_size.xml" value="0.25364583333333335" />
       </map>
     </option>
   </component>
