@@ -6,18 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.arthacker.drawingappforkids.DrawingView
-        android:id="@+id/canvas"
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="2dp"
-        android:layout_marginBottom="80dp"
+        android:padding="1dp"
+        android:background="@drawable/background_drawing_view_layout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/ll_paint_colors">
+        app:layout_constraintBottom_toTopOf="@id/ll_paint_colors"
+        >
 
-    </com.arthacker.drawingappforkids.DrawingView>
+        <ImageView
+
+            android:id="@+id/bg_image"
+            android:src="@drawable/image"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/bg_image"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+
+            >
+
+
+        </ImageView>
+
+        <com.arthacker.drawingappforkids.DrawingView
+            android:id="@+id/canvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80FFFFFF"
+
+            >
+
+        </com.arthacker.drawingappforkids.DrawingView>
+
+    </FrameLayout>
+
+
 
 
 
@@ -26,9 +55,9 @@
         android:layout_width="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/ib_brush"
+        app:layout_constraintBottom_toTopOf="@id/action_buttons"
         android:id="@+id/ll_paint_colors"
-        app:layout_constraintTop_toBottomOf="@id/canvas"
+        app:layout_constraintTop_toBottomOf="@id/frame_layout"
         android:orientation="horizontal">
 
     <ImageButton
@@ -165,14 +194,40 @@
 
 </LinearLayout>
 
-    <ImageButton android:layout_height="50dp"
-        android:layout_width="50dp"
+
+    <LinearLayout
+        android:id="@+id/action_buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_margin="5dp"
-        android:id="@+id/ib_brush"
-        android:src="@drawable/ic_brush"
-        android:contentDescription="@string/image"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:scaleType="fitXY"/>
+
+        >
+
+        <ImageButton android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:id="@+id/ib_brush"
+            android:src="@drawable/ic_brush"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"/>
+
+        <ImageButton android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:id="@+id/choose_image"
+            android:src="@drawable/ic_gallery"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
